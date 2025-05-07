@@ -1,0 +1,232 @@
+/* ======================
+   INCOME STATEMENT STYLES
+   ====================== */
+
+/* Main Container */
+.income-statement-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Section */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Logout Button */
+.logout-button {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}
+
+/* ==============
+   SUMMARY CARDS
+   ============== */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.summary-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.summary-card p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Card Variants */
+.summary-card.income {
+    background-color: #e8f5e9;
+    border-left: 5px solid #4CAF50;
+}
+
+.summary-card.expenses {
+    background-color: #ffebee;
+    border-left: 5px solid #f44336;
+}
+
+.summary-card.profit {
+    background-color: #e3f2fd;
+    border-left: 5px solid #2196F3;
+}
+
+/* =============
+   STATEMENT FORM
+   ============= */
+.statement-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Form Buttons */
+.submit-button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: flex-end;
+}
+
+.cancel-button {
+    padding: 10px 15px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: flex-end;
+}
+
+.submit-button:hover,
+.cancel-button:hover {
+    opacity: 0.9;
+}
+
+/* ================
+   STATEMENTS TABLE
+   ================ */
+.statements-table {
+    overflow-x: auto;
+}
+
+.statements-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.statements-table th, 
+.statements-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.statements-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+/* Table Rows */
+.statements-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.statements-table tr:hover {
+    background-color: #e9e9e9;
+}
+
+/* Profit Indicators */
+.profit-positive {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.profit-negative {
+    color: #c62828;
+    font-weight: bold;
+}
+
+/* Empty State */
+.no-data {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+/* Action Buttons */
+.edit-button {
+    padding: 6px 10px;
+    margin-right: 5px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.delete-button {
+    padding: 6px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    opacity: 0.8;
+}
+
+/* ===========
+   RESPONSIVE
+   =========== */
+@media (max-width: 768px) {
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .statement-form {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,212 @@
+/* ================
+   SALES DASHBOARD
+   ================ */
+
+/* Main Container */
+.sales-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* ============
+   NAVIGATION
+   ============ */
+
+/* Logout Button */
+.logout-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.logout-button:hover {
+    background-color: #c0392b;
+}
+
+/* Navigation Button */
+.nav-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+    background-color: #45a049;
+}
+
+/* =============
+   SALES FORM
+   ============= */
+.sales-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Form Inputs */
+.form-select, 
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-select:focus,
+.form-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Stock Information */
+.stock-info {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+    padding: 5px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    border-left: 3px solid #2196F3;
+}
+
+/* Submit Button */
+.submit-button {
+    padding: 10px 15px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: all 0.2s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.submit-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* =============
+   SALES TABLE
+   ============= */
+.sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    font-size: 15px;
+}
+
+.sales-table th, 
+.sales-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.sales-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+}
+
+/* Table Rows */
+.sales-table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.sales-table tr:hover {
+    background-color: #f0f7ff;
+}
+
+/* Profit Indicators */
+.profit-positive {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.profit-negative {
+    color: #c62828;
+    font-weight: bold;
+}
+
+/* ============
+   CHARTS
+   ============ */
+.chart-container {
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+}
+
+.chart-container h3 {
+    margin-top: 0;
+    color: #444;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* ===================
+   RESPONSIVE DESIGN
+   =================== */
+@media (max-width: 768px) {
+    .sales-container {
+        padding: 15px;
+    }
+    
+    .sales-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .sales-form {
+        padding: 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 12px;
+    }
+}
